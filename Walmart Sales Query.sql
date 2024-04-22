@@ -143,8 +143,6 @@ GROUP BY product_line
 ORDER BY avg_tax DESC;
 
 
--- Fetch each product line and add a column to those product line showing "Good", "Bad". Good if it's greater than average sales.
-
 
 -- Which branch sold more products than average product sold?
 SELECT branch,
@@ -215,7 +213,7 @@ ORDER BY VAT DESC;
 -- ------------------------------------------------------------------------------------------------------------------------------------------
 -- ---------------------------------------------------------- Customers ---------------------------------------------------------------------
 
--- How many unique customer types does the data have?  THIS
+-- How many unique customer types does the data have? 
 SELECT customer_type,
 	COUNT(DISTINCT customer_type) AS customer_cnt
 FROM [Walmart Sales].dbo.WalmartSales
@@ -229,7 +227,7 @@ FROM [Walmart Sales].dbo.WalmartSales
 GROUP BY payment;
 
 
--- What is the most common customer type?   THIS
+-- What is the most common customer type?  
 SELECT customer_type,
 		COUNT(customer_type) AS customer_cnt
 FROM [Walmart Sales].dbo.WalmartSales
